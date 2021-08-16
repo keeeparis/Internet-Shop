@@ -1,0 +1,55 @@
+include header
+
+div(class='wrap')
+  div(class='content')
+    header(class='site-header')
+      include site_header_order 
+
+    div(class='container')
+      div(class='row')
+        div(class='col col-md-12')
+          h3(class='cart-header') Cart 
+          div(id='cart-nav')
+        div(class='col col-md-12')
+          h3 Create order 
+        div(class='col col-md-6')
+          form(id='lite-shop-order', action='')
+            div(class='form-control')
+              label(for='username') Name 
+              input(
+                type='text',
+                id='username',
+                placeholder='Enter your name',
+              )
+            div(class='form-control')
+              label(for='phone') Phone 
+              input(
+                type='tel',
+                id='phone',
+                placeholder='+78881112244',
+              )
+            div(class='form-control')
+              label(for='email') Email 
+              input(
+                type='email',
+                id='email',
+                placeholder='mail@example.com',
+              )
+            div(class='form-control')
+              label(for='address') Address 
+              input(
+                type='text',
+                id='address',
+                placeholder='where you live',
+              )
+            div(class='form-control')
+              label(for='rule') 
+              input(
+                type='checkbox',
+                id='rule',
+                value='1',
+              )
+              span Terms and Conditions
+            div(class='form-control text-right')
+              button(class='btn btn-primary button-order', type='submit') Finish order
+  include footer

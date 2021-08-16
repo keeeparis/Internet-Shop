@@ -1,0 +1,40 @@
+include header
+
+div(class='wrap')
+  div(class='content')
+    header(class='site-header')
+      include site_header
+
+    div(class='container')
+      div(class='row')
+        div(class='col col-md-12')
+          h2(class='panel-title') #{goods[0]['name']})
+        
+        div(class='col col-md-6')
+          div(id='primary-slider', class='splide')
+            div(class='splide__track')
+              ul(class='splide__list')
+                li(class='splide__slide')
+                  img(src=`/img/${goods[0]['image']}`, class='goods-big-image')
+                each val, index in goods_images
+                  li(class='splide__slide')
+                    img(src=`/img/${val['path']}`, class='goods-little-image')
+
+          div(id='secondary-slider', class='splide')
+            div(class='splide__track')
+              ul(class='splide__list')
+                li(class='splide__slide')
+                  img(src=`/img/${goods[0]['image']}`, class='goods-big-image')
+                each val, index in goods_images
+                  li(class='splide__slide')
+                    img(src=`/img/${val['path']}`, class='goods-little-image')
+
+        div(class='col col-md-6 d-flex flex-column')
+          p #{goods[0]['description']}
+          span(class='success') Цена: #{goods[0]['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&   ')} uah
+          button(
+            class='btn btn-success add-to-cart cart-button'
+            data-goods_id=goods[0]['id']
+          ) to cart
+    include nav 
+  include footer

@@ -1,0 +1,22 @@
+include header
+
+div(class='wrap')
+  div(class='content')
+    header(class='site-header')
+      include site_header
+    
+    div(class='container')
+      each val2, index2 in cat 
+        div(class='row')
+          div(class='col col-lg-12')
+            h2(class='panel-title')
+              a(
+                href=`/cat?id=${val2['id']}`
+              ) #{val2['category']}
+        div(class='row')
+          each val, index in goods
+            if val2['id'] == val['category']
+              include card
+    include nav
+  include footer
+        

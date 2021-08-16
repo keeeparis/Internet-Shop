@@ -1,0 +1,15 @@
+include header.pug
+
+h2 My app
+p #{foo}
+h3 #{bar}
+each val, index in goods
+    p #{val['name']}
+    img(
+        src=`images/${val['image']}`
+        class='test'
+    )
+//- в img(src="") можно использовать как конкатенацию, так и через ${}. Оба работают!
+//- src=`images/${val['image']}`
+//- src='images/' + val['image']
+//- класс test использован просто для примера 
