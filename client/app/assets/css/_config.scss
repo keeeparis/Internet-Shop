@@ -1,0 +1,27 @@
+// @import 'scss/fontawesome.scss';
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+        font-weight: $fweight;
+        src: url($furl) format('woff2'); 
+    }
+}
+
+@include font('playfair', normal, 400, '../fonts/PlayfairDisplay-Regular.woff2');
+@include font('playfair', italic, 400, '../fonts/PlayfairDisplay-Italic.woff2');
+
+$bg-color: #FEF9EF;
+$font: 'playfair';
+$black: #000;
+
+/* -------bootstrap override--------- */
+.splide__slide {
+    border: 1px solid transparent !important;
+    border-radius: 3px;
+
+    &.is-active {
+        border-color: $black !important;
+    }
+}
