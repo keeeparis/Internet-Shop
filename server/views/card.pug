@@ -3,7 +3,7 @@ div(class='col col-md-3')
     a(href=`goods/${val['slug']}`)
       h3(class='card-title text-center') #{val['name']}
       img(
-        src=`img/${val['image']}`
+        src=`assets/${val['image']}`
         class='card-images'
       )
       p(class='text-center') #{val['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&   ')} uah

@@ -6,7 +6,7 @@ h3 #{bar}
 each val, index in goods
     p #{val['name']}
     img(
-        src=`images/${val['image']}`
+        src=`assets/${val['image']}`
         class='test'
     )
 //- в img(src="") можно использовать как конкатенацию, так и через ${}. Оба работают!
