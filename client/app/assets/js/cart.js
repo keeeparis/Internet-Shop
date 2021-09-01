@@ -41,9 +41,9 @@ function showCart(data) {
     let total = 0;
     for (let key in cart) {
         out += `<tr><td colspan=4><a href="/goods/${data[key]['slug']}">${data[key]['name']}</a></td></tr>`;
-        out += `<tr><td><i class="fa fa-minus-square cart-minus" data-goods_id = ${key}></i></td>`;
+        out += `<tr><td class='vertical-text-align-td'><div class="cart-minus" data-goods_id = ${key}></button></td>`;
         out += `<td>${cart[key]}</td>`;
-        out += `<td><i class="fa fa-plus-square cart-plus" data-goods_id = ${key}></i></td>`;
+        out += `<td class='vertical-text-align-td'><div class="cart-plus" data-goods_id = ${key}></button></td>`;
         out += `<td>${formatPrice(data[key]['cost']*cart[key])} uah </td>`;
         out += `</tr>`;
         total += cart[key]*data[key]['cost'];
