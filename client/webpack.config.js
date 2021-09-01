@@ -37,19 +37,6 @@ module.exports = {
                     }  
                 ]
             },
-            // { test: /\.svg$/,
-            //     type: 'asset/resource',
-            //     generator: {
-            //         filename: 'img/[name][ext]'
-            //     },
-            //     use: 'svgo-loader'
-            // },
-            // { test: /\.(png|jpg|gif)$/,
-            //     type: 'asset/resource',
-            //     generator: {
-            //         filename: 'img/[name][ext]'
-            //     }
-            // },
             { test: /\.(woff2|woff|eot|ttf)$/,
                 type: 'asset/resource'               
             },
@@ -76,7 +63,8 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: `${PATH.src}/${PATH.assets}/img`, to: `${PATH.assets}` }
+                { from: `${PATH.src}/${PATH.assets}/img`, to: `${PATH.assets}` },
+                { from: `${PATH.src}/${PATH.assets}/svg`, to: `${PATH.assets}` }
             ],
         }),
         new ImageminPLugin({
