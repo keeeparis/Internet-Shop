@@ -11713,6 +11713,13 @@ ul.card-actions {
 .show-nav {
   position: relative;
 }
+.show-nav::before {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  content: "\f0c9";
+  font-size: 1em;
+}
 
 ul.category-list a {
   color: #424242;
@@ -11745,6 +11752,13 @@ ul.category-list a.underlined:hover::after, ul.category-list a.underlined:focus:
 .site-nav a.button-order {
   color: #fff;
 }
+.site-nav button.close-nav::before {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  content: "\f00d";
+  font-size: 1em;
+}
 
 .cart-button {
   width: 100px;
@@ -11752,6 +11766,22 @@ ul.category-list a.underlined:hover::after, ul.category-list a.underlined:focus:
 
 .cart-minus, .cart-plus {
   cursor: pointer;
+}
+
+.cart-plus::before {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  content: "\f067";
+  font-size: 1em;
+}
+
+.cart-minus::before {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  content: "\f068";
+  font-size: 1em;
 }
 
 .panel-title {
@@ -11775,6 +11805,11 @@ ul.category-list a.underlined:hover::after, ul.category-list a.underlined:focus:
 .map {
   padding-top: 50px;
   padding-bottom: 30px;
+}
+
+.vertical-text-align-td {
+  text-align: center;
+  vertical-align: middle;
 }
 
 /*# sourceMappingURL=main.bundle.css.map*/

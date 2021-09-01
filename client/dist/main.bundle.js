@@ -5924,7 +5924,6 @@ var module_Splide = /*#__PURE__*/function (_Core) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_splidejs_splide__WEBPACK_IMPORTED_MODULE_0__);
- // const Splide = require('@splidejs/splide')
 
 document.addEventListener('DOMContentLoaded', function () {
   try {
@@ -6010,9 +6009,9 @@ function showCart(data) {
 
   for (var key in cart) {
     out += "<tr><td colspan=4><a href=\"/goods/".concat(data[key]['slug'], "\">").concat(data[key]['name'], "</a></td></tr>");
-    out += "<tr><td><i class=\"fa fa-minus-square cart-minus\" data-goods_id = ".concat(key, "></i></td>");
+    out += "<tr><td class='vertical-text-align-td'><div class=\"cart-minus\" data-goods_id = ".concat(key, "></button></td>");
     out += "<td>".concat(cart[key], "</td>");
-    out += "<td><i class=\"fa fa-plus-square cart-plus\" data-goods_id = ".concat(key, "></i></td>");
+    out += "<td class='vertical-text-align-td'><div class=\"cart-plus\" data-goods_id = ".concat(key, "></button></td>");
     out += "<td>".concat(formatPrice(data[key]['cost'] * cart[key]), " uah </td>");
     out += "</tr>";
     total += cart[key] * data[key]['cost'];
@@ -6141,7 +6140,6 @@ try {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
-// const Swal = require('sweetalert2');
 
 
 try {
