@@ -10,9 +10,7 @@ div(class='wrap')
         div(class='row')
           div(class='col col-lg-12')
             h2(class='panel-title')
-              a(
-                href=`/cat?id=${val2['id']}`
-              ) #{val2['category']}
+              a(href=`/cat?id=${val2['id']}`) #{val2['category']}
         div(class='row')
           each val, index in goods
             if val2['id'] == val['category']
